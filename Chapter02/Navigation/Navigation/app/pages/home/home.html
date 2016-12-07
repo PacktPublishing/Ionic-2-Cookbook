@@ -1,0 +1,47 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+
+  <ion-card>
+    <ion-card-header>
+      NavPush 1
+    </ion-card-header>
+    <ion-card-content>
+      <p>Use both <code>navPush</code> and <code>navParams</code></p>
+      <button block primary [navPush]="otherPage" [navParams]="myString">OtherPage 1</button>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      NavPush 2
+    </ion-card-header>
+    <ion-card-content>
+      <p>Use only <code>navPush</code> and pass an array instead</p>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="myJSON.text"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div padding>
+        <button block secondary [navPush]="[otherPage, myJSON]">OtherPage 2</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      NavPush 3
+    </ion-card-header>
+    <ion-card-content>
+      <p>Use click event to trigger <code>nav.push</code> in Javascript </p>
+      <button block dark (click)="gotoOtherPage()">OtherPage 3</button>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
