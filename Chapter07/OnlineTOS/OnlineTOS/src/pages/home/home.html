@@ -1,0 +1,16 @@
+<ion-content class="home">
+  <div class="top-header center">
+    <ion-icon name="alert"></ion-icon>
+    <br/>
+    <h3>
+      Important Information
+    </h3>
+  </div>
+  <ion-item>
+    <ion-label>Please agree to our terms</ion-label>
+    <ion-checkbox dark (click)="openTOS()"></ion-checkbox>
+  </ion-item>
+  <div class="center">
+    <button ion-button class="long" [(disabled)]="!readTOS">Next</button>
+  </div>
+</ion-content>

@@ -1,0 +1,27 @@
+.home {
+  .item-inner {
+    border-bottom: 0;
+  }  
+}
+
+.top-header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  ion-icon {
+    color: #EB6B56;
+    font-size: 100px;
+  }
+  
+  h3 {
+    color: #75706B;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.long {
+  padding: 0 5em;
+}
