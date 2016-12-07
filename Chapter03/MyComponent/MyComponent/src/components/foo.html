@@ -1,0 +1,43 @@
+<ion-list>
+  <ion-item>
+    <ion-label>Vegetarian</ion-label>
+    <ion-toggle (click)="isClicked(data.myToggle)" [(ngModel)]="data.myToggle"></ion-toggle>
+  </ion-item>
+  
+  <ion-card *ngIf="data.myToggle">
+    <ion-card-header>
+      I only eat vegetarian foods
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        Mushroom
+      </button>
+      <button ion-item>
+        Spinach
+      </button>
+      <button ion-item>
+        Red Peppers
+      </button>
+    </ion-list>
+  </ion-card>
+  
+  <ion-card *ngIf="!data.myToggle">
+    <ion-card-header>
+      I love meat
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        Beef
+      </button>
+      <button ion-item>
+        Chicken
+      </button>
+      <button ion-item>
+        Sausage
+      </button>
+    </ion-list>
+  </ion-card>
+  
+</ion-list>
