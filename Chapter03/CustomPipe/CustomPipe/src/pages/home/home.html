@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      User
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h4>Unformatted Value</h4>
+  <ion-card>
+
+    <ion-card-header>
+      <code>user</code>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ user | json }}
+    </ion-card-content>
+
+  </ion-card>
+  
+  <h4>Formatted Value</h4>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>First Name</ion-label>
+      <ion-note item-right>{{ user | userExtract : "firstname" }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Last Name</ion-label>
+      <ion-note item-right>{{ user | userExtract : "lastname" }}</ion-note>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label fixed>Age</ion-label>
+      <ion-note item-right>{{ user | userExtract : "age" }}</ion-note>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
