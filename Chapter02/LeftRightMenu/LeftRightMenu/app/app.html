@@ -1,0 +1,42 @@
+<ion-menu id="leftMenu" [content]="mycontent" side="left" type="overlay">
+
+  <ion-toolbar>
+    <ion-title>Pages</ion-title>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="#p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu id="rightMenu" [content]="mycontent" side="right" type="reveal">
+
+  <ion-toolbar>
+    <ion-title>Items</ion-title>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="rightMenuClick('Item One')">
+        Item One
+      </button>
+      <button ion-item (click)="rightMenuClick('Item Two')">
+        Item Two
+      </button>
+    </ion-list>
+    
+    <ion-card *ngIf="text">
+      <ion-card-content>
+        You just clicked {{ text }}
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #mycontent></ion-nav>

@@ -1,0 +1,33 @@
+<ion-navbar *navbar>
+  <ion-title>Getting Started</ion-title>
+
+  <ion-buttons start>
+    <button menuToggle="leftMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-buttons> 
+  
+  <ion-buttons end>
+    <button menuToggle="rightMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+  </ion-buttons> 
+
+</ion-navbar>
+
+<ion-content padding class="getting-started">
+
+  <h3>Welcome to the Menu Experiment</h3>
+  <p>
+     You can open both left and right menu using below buttons or top navigation bar!
+  </p>
+  <ion-row>
+    <ion-col width-50>
+      <button primary block menuToggle="leftMenu">Toggle Left</button>
+    </ion-col>
+    <ion-col width-50>
+      <button primary block menuToggle="rightMenu">Toggle Right</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
