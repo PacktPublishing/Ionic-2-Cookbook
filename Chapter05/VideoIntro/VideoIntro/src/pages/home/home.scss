@@ -1,0 +1,35 @@
+.home {
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 1px 0 0 gray, -1px 0 0 gray, 0 1px 0 gray, 0 -1px 0 gray, 1px 1px gray, -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray;
+  
+  h1 {
+    font-size: 5rem;
+  }
+   
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.center {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute !important;
+  text-align: center;
+  width:100%;
+}

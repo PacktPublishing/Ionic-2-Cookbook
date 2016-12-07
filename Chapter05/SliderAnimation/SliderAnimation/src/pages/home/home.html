@@ -1,0 +1,36 @@
+<ion-content class="home">
+  <div class="slides-float">
+    
+    <div class="slide-float" #slidefloat1>
+      <ion-icon name="ios-ionic"></ion-icon> 
+      <h1>Ionic 2</h1>
+    </div>
+
+    <div class="slide-float" #slidefloat2>
+      <ion-icon name="logo-angular"></ion-icon> 
+      <h1>Angular 2</h1>
+    </div>
+
+    <div class="slide-float" #slidefloat3>
+      <ion-icon name="logo-javascript"></ion-icon> 
+      <h1>Both</h1>
+    </div>
+
+  </div>
+  
+  <ion-slides #myslides pager (ionDrag)="onMove()">
+
+    <ion-slide>
+      <h2>is Beautiful</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>is Fast</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>are Awesome</h2>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-content class="home">
+  <div class="my-card" #myCard>
+    <h1>QUOTE</h1>
+    <p class="body">Always remember that you are absolutely unique. Just like everyone else.</p>
+    <p class="name">Margaret Mead</p>
+  </div>
+</ion-content>
+
+<ion-fab center bottom>
+  <button ion-fab #thisEl (click)="animateMe(thisEl)">
+    <ion-icon name="mic"></ion-icon>
+  </button>
+</ion-fab>
