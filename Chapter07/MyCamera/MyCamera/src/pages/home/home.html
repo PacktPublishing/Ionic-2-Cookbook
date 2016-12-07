@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row class="center">
+    <ion-col width-50>
+      <button ion-button (click)="getPicture(1)">Show Camera</button>  
+    </ion-col>
+    <ion-col width-50>
+      <button ion-button (click)="getPicture(0)">Show Album</button>  
+    </ion-col>
+  </ion-row>
+
+  <ion-item class="no-border">
+    <ion-label>Return image file URI</ion-label>
+    <ion-toggle energized [(ngModel)]="useURI"></ion-toggle>
+  </ion-item>
+  
+  <ion-card>
+    <img [src]="imageData" *ngIf="imageData" />
+    <ion-card-content>
+      <ion-card-title>
+        <div *ngIf="useURI">
+          Using URI
+        </div>
+        <div *ngIf="!useURI">
+          Using Base64
+        </div>
+      </ion-card-title>
+      <p *ngIf="useURI">
+        Your URI is {{ imageData }}
+      </p>
+      <p *ngIf="!useURI">
+        Your Base64 image has {{ (imageData + '').length }} bytes
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

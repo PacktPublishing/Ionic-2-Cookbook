@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-item>
+      <h2 #messageSubject>Ionic Developer</h2>
+      <p>May 5, 2016</p>
+    </ion-item>
+
+    <img src="https://source.unsplash.com/category/technology/600x390">
+
+    <ion-card-content>
+      <p #messageBody>Wow Ionic 2 is so awesome. I gotta share this to other people.</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-left>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-left
+          (click)="sendShare(messageBody.innerText, messageSubject.innerText, 'http://ionicframework.com/docs/v2/')">
+          <ion-icon name="ios-share"></ion-icon>
+          <div>Share</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
