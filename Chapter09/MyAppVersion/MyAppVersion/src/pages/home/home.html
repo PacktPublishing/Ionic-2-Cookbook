@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MyAppVersion
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="center home">
+  <button ion-button (click)="getVersion()" >Get App Version</button>
+  <p class="large" *ngIf="ver">
+    MyAppVersion {{ ver }}
+  </p>
+</ion-content>
