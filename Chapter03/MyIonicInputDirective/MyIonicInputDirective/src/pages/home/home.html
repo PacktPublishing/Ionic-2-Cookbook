@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item >
+      <ion-input type="text" placeholder="Username" [(ngModel)]="username" [myIonicInput]="myStyles"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <p *ngIf="myStyles.showUsername" class="hint">
+    You are typing username
+  </p>
+
+  <ion-fab bottom center>
+    <button ion-fab>GO</button>
+  </ion-fab>
+</ion-content>

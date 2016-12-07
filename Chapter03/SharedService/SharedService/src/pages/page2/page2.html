@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Confirmation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-card>
+    <ion-card-header>
+      Please confirm your profile
+    </ion-card-header>
+    <ion-card-content>
+      {{ user.name }} is {{ user.age }} years old
+    </ion-card-content>
+  </ion-card>
+  
+  <button ion-button full block (click)="goToPage1()">Back to Page 1</button>
+</ion-content>

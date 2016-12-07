@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      What you are entering
+    </ion-card-header>
+    <ion-card-content>
+      <ion-badge item-right>Name</ion-badge> {{ user.name }}
+      <br><br>
+      <ion-badge item-right>Age</ion-badge> {{ user.age }}
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="number" [(ngModel)]="user.age"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  
+  <button ion-button full block (click)="goToPage2()">Go to Page 2</button>
+
+</ion-content>
