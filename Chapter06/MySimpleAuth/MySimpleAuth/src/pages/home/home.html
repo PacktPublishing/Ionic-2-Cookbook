@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      User Authentication
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="!auth.isAuthenticated()">
+
+    <h4>
+      Register or Login
+    </h4>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <button ion-button block (click)="register()">Register</button>
+        </ion-col>
+        <ion-col width-50>
+          <button ion-button block (click)="login()">Login</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div *ngIf="auth.isAuthenticated()">
+
+    <h4>
+      User Profile
+    </h4>
+
+    <ion-list *ngIf="auth.isAuthenticated()">
+
+      <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input class="right" type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="birthday"></ion-datetime>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <button ion-button color="secondary" block (click)="save()">Save</button>
+        </ion-col>
+        <ion-col width-50>
+          <button ion-button color="dark" block (click)="logout()">Logout</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+</ion-content>
