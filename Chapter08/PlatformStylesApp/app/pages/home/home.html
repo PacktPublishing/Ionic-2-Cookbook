@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar primary [ngClass]="{'large-center-title': isWP}">
+    <ion-title>
+      My Theme
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Did you see this bulb? It's the same across all platforms.
+  <p class="center">
+    <ion-icon class="large-icon" name="bulb"></ion-icon>
+  </p>
+  
+  <p *ngIf="isIOS">
+    Hey iPhone user, can you review this app in App Store? 
+  </p>
+  <p *ngIf="isAndroid">
+    Hey Android user, can you review this app in Google Play? 
+  </p>
+  <p *ngIf="isWP">
+    Hey Windows Phone user, can you review this app in Marketplace? 
+  </p>
+</ion-content>

@@ -1,0 +1,21 @@
+.large-icon {
+  font-size: 60px;
+}
+
+.center {
+  text-align: center;
+}
+
+.md .toolbar[primary] .toolbar-background {
+  background: #1A2980; 
+  background: -webkit-linear-gradient(right, #1A2980, #26D0CE);
+  background: -o-linear-gradient(right, #1A2980, #26D0CE);
+  background: linear-gradient(to left, #1A2980, #26D0CE); 
+}
+
+.large-center-title {
+  text-align: center;
+  .toolbar-title {
+    font-size: 25px;
+  }
+}
