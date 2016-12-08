@@ -1,0 +1,29 @@
+.center {
+  text-align: center;
+}
+
+.gray-bg {
+  background-color: #f4f4f7;
+}
+
+.icon-large {
+  font-size: 150px;
+  color: #387ef5;
+  opacity: 0.5;
+}
+
+ion-list > .item:first-child {
+  border-top: 0;  
+}
+
+ion-card ion-list .item {
+  border-bottom: 1px solid #c8c7cc;
+}
+
+ion-list .item-inner {
+  border-bottom: 0;
+}
+
+ion-card-content .button-block {
+  margin-top: 16px;
+}

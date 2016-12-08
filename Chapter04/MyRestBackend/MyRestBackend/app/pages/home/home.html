@@ -1,0 +1,19 @@
+<ion-navbar dark *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-card #myCard *ngFor="#item of quotes.data">
+    <img [src]='"https://source.unsplash.com/category/" + item.category + "/600x390"' [height]="myCard.clientWidth * 390 / 600"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.title }}
+      </ion-card-title>
+      <p>
+        {{ item.description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

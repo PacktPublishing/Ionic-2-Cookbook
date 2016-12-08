@@ -1,0 +1,51 @@
+<ion-navbar primary *navbar>
+  <ion-title>
+    Contact Form
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <p class="center">
+    <ion-icon class="large lighter" primary name="contact"></ion-icon>
+  </p>
+  <form #f="ngForm" novalidate (ngSubmit)="onSubmit(f)">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" ngControl="name" required [(ngModel)]="data.name"></ion-input>
+      </ion-item>
+      <div [hidden]="f.controls.name && (f.controls.name.valid || (f.controls.name.pristine && !isSubmitted))" class="note danger">
+        Name is required
+      </div>
+
+      <ion-item>
+        <ion-label floating>Phone</ion-label>
+        <ion-input type="tel" ngControl="phone" [(ngModel)]="data.phone"></ion-input>
+      </ion-item>  
+      
+      <ion-item>
+        <ion-label floating>Comment</ion-label>
+        <ion-input type="text" required minlength=4 ngControl="comment" [(ngModel)]="data.comment"></ion-input>
+      </ion-item>
+      <div *ngIf="(isSubmitted && f.controls.comment && f.controls.comment.pristine) || ((f.controls.comment) && (f.controls.comment.dirty && f.controls.comment.errors))" class="note danger">
+        Please enter {{ 4 - (f.controls.comment.errors.minlength ? f.controls.comment.errors.minlength.actualLength : 0) }} more characters
+      </div>
+            
+      <ion-item class="tos">
+        <ion-toggle item-left [(ngModel)]="data.tos" ngControl="tos" type="button" (click)="noSubmit($event)"></ion-toggle>
+        <ion-label item-right>Agree to terms and conditions</ion-label>
+      </ion-item>
+      
+      <div [hidden]="(!isSubmitted) || (f.controls.tos && data.tos)" class="note danger">
+        Please check Agree!
+      </div>
+
+    </ion-list>
+    
+    <div class="center">
+      <button type="submit" round outline>Submit</button>
+    </div>
+  </form>
+
+</ion-content>

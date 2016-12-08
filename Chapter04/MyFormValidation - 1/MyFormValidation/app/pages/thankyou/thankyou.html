@@ -1,0 +1,26 @@
+<ion-navbar primary *navbar>
+  <ion-title>
+    Thank you
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <h6 class="padding">
+    You submitted the following information
+  </h6>
+  
+  <div class="my-table">
+    <ion-row>
+      <ion-col width-25 class="my-label">Name</ion-col>
+      <ion-col width-75>{{ formData.name }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25 class="my-label">Phone</ion-col>
+      <ion-col width-75>{{ formData.phone }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25 class="my-label">Comment</ion-col>
+      <ion-col width-75>{{ formData.comment }}</ion-col>
+    </ion-row>
+  </div>  
+</ion-content>

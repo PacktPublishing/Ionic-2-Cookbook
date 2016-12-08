@@ -1,0 +1,31 @@
+<ion-content class="gray-bg">
+  <p class="center">
+    <ion-icon class="icon-large" name="card"></ion-icon>
+  </p>
+
+  <ion-card>
+    <ion-card-content>
+      <form #f="ngForm" novalidate (ngSubmit)="onSubmit(f)">
+        <ion-list>
+
+          <ion-item>
+            <ion-input type="number" ngControl="cc" placeholder="Number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="number" ngControl="cvc" placeholder="CVC"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input item-left type="number" ngControl="month" placeholder="Month"></ion-input>
+            <ion-input item-right type="number" ngControl="year" placeholder="Year"></ion-input>
+          </ion-item>
+          
+          <button bottom block>Pay $20</button>
+
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+    
+</ion-content>

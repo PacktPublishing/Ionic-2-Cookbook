@@ -1,0 +1,26 @@
+h6.padding {
+  color: #4C555A;
+  padding: 10px;
+}
+
+.my-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.my-table {
+  ion-row {
+    color: #4C555A;
+    padding: 0;
+    height: 30px;
+  }
+  
+  ion-row + ion-row {
+    margin-top: 0;
+  }
+  
+  ion-row:nth-child(odd) ion-col {
+    background: #F9FAFB;
+  }
+}
+  

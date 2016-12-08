@@ -1,0 +1,43 @@
+.home {
+  
+}
+
+.center {
+  text-align: center;
+}
+
+ion-icon.large {
+  font-size: 7em;
+}
+
+ion-icon.lighter {
+  opacity: 0.5;
+}
+
+ion-list > .item:first-child {
+  border-top: 0;
+}
+
+ion-list > .item:last-child, ion-list > ion-item-sliding:last-child .item {
+  border-bottom: 0;
+}
+
+.tos {
+  padding-top: 10px;
+  
+  ion-toggle {
+    padding-left: 0px;  
+  }
+  .item-inner {
+    border-bottom: 0;
+  }
+}
+
+.item ion-toggle {
+  padding-left: 0;
+}
+
+.note.danger {
+  padding-left: 16px;
+  color: #d14;
+}
