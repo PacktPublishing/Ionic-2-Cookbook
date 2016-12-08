@@ -1,5 +1,5 @@
 #Ionic 2 Cookbook - Second Edition
-This is the code repository for [Ionic 2 Cookbook - Second Edition](https://www.packtpub.com/web-development/ionic-2-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786465962), published by [Packt](www.packtpub.com). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Ionic 2 Cookbook - Second Edition](https://www.packtpub.com/web-development/ionic-2-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786465962), published by [Packt](https://www.packtpub.com). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 Developing real-time apps is the need of the hour, and apps that deal with humongous amounts of user data and real-time information that needs to be updated frequently are in high demand. Currently, one of the most popular frameworks for this task is Ionic Framework, which is undergoing a major makeover.
 ##Instructions and Navigations
